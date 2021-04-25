@@ -18,7 +18,8 @@
   "homepage": "https://github.com/kexinWeb/node-samples#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.6"
+    "http-proxy-middleware": "^1.0.6",
+    "tapable": "^2.2.0"
   },
   "devDependencies": {
     "open": "^8.0.4"
