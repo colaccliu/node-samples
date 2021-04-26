@@ -1,12 +1,12 @@
-const { SyncHook } = require('tapable')
+// const { SyncHook } = require('tapable')
+const SyncHook = require('./SyncHook')
 
 class Car {
   constructor() {
     this.hooks = {
-      brake: new SyncHook(["newSpeed"]),
+      brake: new SyncHook(),
     };
   }
-
   setSpeed(newSpeed) {
     this.hooks.brake.call(newSpeed);
   }
@@ -14,6 +14,5 @@ class Car {
 
 const myCar = new Car()
 
-// 设计模式，各种解耦
 myCar.hooks.brake.tap('LoggerPlugin', newSpeed => console.log(`Accelerating to ${newSpeed}`))
 myCar.setSpeed('20')
