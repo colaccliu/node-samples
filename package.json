@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kexinWeb/node-samples#readme",
   "dependencies": {
+    "@alicloud/opentracing": "^0.1.1",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.6",
     "tapable": "^2.2.0"
