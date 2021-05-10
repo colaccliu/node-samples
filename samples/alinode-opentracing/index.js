@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const opentracing = require("@alicloud/opentracing");
 const tracer = new opentracing.Tracer("测试链路");
+// 本示例要结合阿里开发的监控平台进行使用
 
 // 模拟耗时的异步操作
 function delay(time, req) {
@@ -60,3 +61,5 @@ app.get("*", function (req, res) {
 });
 
 app.listen(3000);
+
+
